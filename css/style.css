@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/nunito-regular-webfont.woff2") format("woff2"), url("../fonts/Nunito-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito-Old";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/nunito-regular-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Podkova";
+  font-style: normal;
+  font-weight: 125 950;
+  src: local("Podkova[wght]"), url("../fonts/Podkova[wght].ttf") format("truetype");
+}
+/*@font-face {*/
+/*    font-family: 'Podkova';*/
+/*    font-style: normal;*/
+/*    font-display: swap;*/
+/*    font-weight: 700;*/
+/*    src: local('Podkova Bold '),*/
+/*    local('Podkova-Bold'),*/
+/*    url('../fonts/podkova-latin-700.woff2') format('woff2'),*/
+/*    url('../fonts/podkova-latin-700.woff') format('woff');*/
+/*}*/
+/*https://fonts.gstatic.com/s/podkova/v26/K2FxfZ1EmftJSV9VaJnzJw.woff2*/
+/*https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofINeaB.woff2*/
+/*https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofIMeaBXso.woff2*/
+/*https://fonts.gstatic.com/s/podkova/v26/K2FxfZ1EmftJSV9VaJ3zJ7Kh.woff2*/
+*, *::before, *::after {
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: hsl(0deg, 0%, 20%);
+  font-family: Podkova, sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type=number].no-arrows {
+  -moz-appearance: textfield;
+}
+input[type=number].no-arrows::-webkit-outer-spin-button, input[type=number].no-arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn {
+  border: none;
+  font-family: Muller, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn_orange {
+  padding: 16px 35px;
+  display: block;
+  max-width: 300px;
+  margin-top: 10px;
+  background-color: hsl(14deg, 100%, 68%);
+  color: #fff;
+  font-family: Podkova, sans-serif;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+.btn_orange:hover {
+  background-color: hsl(7deg, 100%, 60%);
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+.container_body {
+  position: relative;
+  overflow: hidden;
+}
+.container_600 {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 640px;
+  width: 100%;
+}
+
+.title_h2 {
+  color: hsl(176deg, 100%, 33%);
+  font-size: 50px;
+  line-height: 1;
+  font-family: Podkova, sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.bg_black {
+  background-color: hsl(0deg, 0%, 20%);
+  color: white;
+}
+.bg_turquoise {
+  background-color: hsla(176deg, 100%, 33%, 0.08);
+}
+
+.hero {
+  padding: 240px 0;
+  background: hsl(176deg, 100%, 33%) url("../images/bg_hero_full.webp") left center no-repeat;
+}
+.hero__text {
+  margin-left: auto;
+  max-width: 540px;
+  color: white;
+  font-weight: 400;
+}
+.hero__text p {
+  font-family: Nunito, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.hero__text .title_h1 {
+  font-family: Podkova, sans-serif;
+  font-size: 58px;
+  line-height: 80px;
+  font-weight: 700;
+}
+
+.about__mission p {
+  font-family: Podkova, sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.dignity__item {
+  padding: 80px 0;
+}
+.dignity__item .container {
+  display: flex;
+  flex-flow: wrap;
+}
+.dignity__item__image-wrapper {
+  max-width: 560px;
+  flex: 1;
+}
+.dignity__item__image-wrapper img {
+  max-width: 100%;
+  width: 100%;
+}
+.dignity__item__text-block {
+  flex: 1;
+}
+.dignity__item__btn-wrapper {
+  flex: 100%;
+}
+.footer {
+  padding: 40px 0;
+  background-color: hsl(187deg, 100%, 18%);
+}
+.footer__bottom {
+  border-top: 3px solid hsl(212deg, 38%, 92%);
+}
+
+/*# sourceMappingURL=style.css.map */

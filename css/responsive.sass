@@ -1,0 +1,126 @@
+@media only screen and (max-width: 1324px)
+
+@media only screen and (max-width: 1024px)
+  .title
+    &_h1
+      font-size: 52px
+
+  .hero
+    padding: 180px 0
+
+@media only screen and (max-width: 864px)
+
+@media only screen and (max-width: 768px)
+  .title
+    &_h1
+      font-size: 48px
+    &_h2
+      font-size: 42px
+
+  .header
+    &__btn__burger
+      display: flex
+    &__burger
+      flex-flow: column
+      justify-content: flex-start
+      gap: 60px
+      background-color: transparent
+      transition: transform 0.5s ease-in-out, background-color 0.4s
+      z-index: 20
+      position: absolute
+      right: 0
+      left: 0
+      top: 100%
+      height: 100vh
+      -webkit-transform: translateY(-120%)
+      -moz-transform: translateY(-120%)
+      -ms-transform: translateY(-120%)
+      -o-transform: translateY(-120%)
+      transform: translateY(-120%)
+      &.active
+        transform: translateY(0)
+        background-color: transparent
+        transition: transform 0.5s ease-in-out, background-color 0.4s
+    .nav
+      &_header
+        padding: 32px
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        -webkit-transform: translateY(-100%)
+        -moz-transform: translateY(-100%)
+        -ms-transform: translateY(-100%)
+        -o-transform: translateY(-100%)
+        transform: translateY(-100%)
+        transition: transform 0.3s ease-in-out
+        z-index: 80
+        background-color: $white
+        &.active
+          -webkit-transform: translateY(60px)
+          -moz-transform: translateY(60px)
+          -ms-transform: translateY(60px)
+          -o-transform: translateY(60px)
+          transform: translateY(60px)
+      &__list
+        flex-flow: column
+
+@media only screen and (max-width: 640px)
+  .title_h1
+    font-size: 40px
+
+  .about__intro__text
+    p
+      text-align: justify
+
+  .advantages__item__image-wrapper
+    min-height: 380px
+
+  .dignity__item
+    padding: 64px 0
+
+  .footer
+    &__top
+      flex-flow: column
+      align-items: center
+      gap: 32px
+    &__logo
+      width: 200px
+    &__bottom
+      text-align: center
+    .nav__list
+      text-align: center
+
+  .swiper-button-prev, .swiper-button-next
+    display: none
+
+@media only screen and (max-width: 480px)
+  .container
+    padding: 0 12px
+
+  .title
+    &_h1
+      font-size: 40px
+    &_h2
+      font-size: 36px
+    &_h3
+      font-size: 24px
+
+  .advantages__item__image-wrapper
+    min-height: 240px
+
+  .dignity__item
+    padding: 40px 0
+
+  .contacts
+    &__half-block_right
+      padding: 40px 20px
+    &__item
+      font-size: 20px
+    &__link
+      font-size: 20px
+
+@media only screen and (max-width: 360px)
+  .container
+    padding: 0 8px
+

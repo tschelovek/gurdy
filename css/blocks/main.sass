@@ -1,10 +1,11 @@
 .hero
   padding: 240px 0
   background: $turquoise url("../images/bg_hero_full.webp") left center no-repeat
+  background-size: cover
   &__text
     margin-left: auto
     max-width: 540px
-    color: white
+    color: $white
     font-weight: 400
     p
       font-family: Nunito, sans-serif
@@ -18,27 +19,200 @@
       font-weight: 700
 
 .about
+  padding: 40px 0
+  &__intro
+    display: flex
+    justify-content: center
+    flex-flow: wrap
+    gap: 20px
+    &__text
+      min-width: 300px
+      flex: 7
+      p
+        font-family: Nunito, sans-serif
+        font-size: 18px
+        line-height: 1.5
+        font-weight: 400
+    &__image-wrapper
+      background: $white url("../images/bg1.svg") center center no-repeat
+      min-width: 230px
+      min-height: 230px
+      flex: 5
   &__mission
+    margin-top: 20px
+    &__title
+      margin-bottom: 8px
+      opacity: 0.8
+      font-size: 20px
+      font-weight: 600
+      color: hsla(176, 100%, 33%, 0.8)
     p
       font-family: Podkova, sans-serif
       font-size: 35px
       font-weight: 500
+      color: $turquoise
+
+.advantages
+  &__list
+    margin: 20px 0
+  &__item
+    padding: 40px 0
+    display: flex
+    align-items: center
+    flex-flow: wrap
+    &_1 .advantages__item__image-wrapper
+      background: url("../images/assets/comp.svg") center center no-repeat
+    &_2 .advantages__item__image-wrapper
+      background: url("../images/assets/des.svg") center center no-repeat
+    &_3 .advantages__item__image-wrapper
+      background: url("../images/assets/int.svg") center center no-repeat
+    &_4 .advantages__item__image-wrapper
+      background: url("../images/assets/cost.svg") center center no-repeat
+    &__image-wrapper
+      min-width: 280px
+      min-height: 500px
+      flex: 7
+    &__text-block
+      padding: 16px
+      flex: 5
+    &__list
+      margin-left: 20px
+      list-style: disc
+      font-family: Nunito, sans-serif
+      font-size: 20px
+      line-height: 1.5
+      font-weight: 400
+      li
+        margin-bottom: 10px
+
+.functions
+  &__wrapper-lists
+    margin-top: 32px
+    display: flex
+    flex-flow: wrap
+    column-gap: 20px
+  &__list
+    min-width: 300px
+    flex: 1
+    &__item
+      padding-left: 20px
+      position: relative
+      margin-bottom: 12px
+      font-family: Nunito, sans-serif
+      color: #000
+      font-size: 18px
+      line-height: 100%
+      font-weight: 500
+      &:before
+        content: ''
+        position: absolute
+        top: 2px
+        left: 0
+        display: inline-block
+        width: 12px
+        height: 12px
+        border: 2px solid hsl(14, 100%, 68%)
+        -webkit-border-radius: 50%
+        -moz-border-radius: 50%
+        border-radius: 50%
 
 .dignity
+  padding: 40px 0
   &__item
     padding: 80px 0
-    .container
-      display: flex
-      flex-flow: wrap
     &__image-wrapper
       max-width: 560px
+      min-width: 260px
       flex: 1
       img
         max-width: 100%
         width: 100%
     &__text-block
       flex: 1
+      display: flex
+      flex-flow: column
+      justify-content: center
     &__btn-wrapper
       flex: 100%
+    .container
+      display: flex
+      flex-flow: wrap
+      gap: 16px
+    &_reverse .container
+      flex-flow: row-reverse wrap
   &__text
+    margin-bottom: 10px
+    color: black
+    font-family: Nunito, sans-serif
+    line-height: 150%
+    text-align: left
     &_main
+      opacity: 0.8
+      color: $turquoise
+      font-size: 20px
+      line-height: 20px
+      font-weight: 600
+      letter-spacing: 1px
+      text-transform: uppercase
+
+.sla
+  margin-top: 20px
+  &__wrapper
+    margin: 0 auto
+    padding-bottom: 40px
+    max-width: 600px
+  &__image-wrapper
+    margin-top: 40px
+  &__text
+    font-family: Nunito, sans-serif
+    color: #000
+    font-weight: 400
+    line-height: 1.5
+  .container
+    border-bottom: 3px solid hsla(14, 100%, 68%, 0.56)
+
+.demo
+  margin: 20px 0 80px
+  &__image-wrapper
+    margin: 40px 0
+    img
+      width: 100%
+  &__title
+    margin-bottom: 20px
+    font-size: 44px
+    line-height: 1.4
+    font-weight: 400
+    text-align: center
+    color: $turquoise
+
+.contacts
+  display: flex
+  flex-flow: wrap-reverse
+  background-color: $darkGreen
+  &__half-block
+    flex: 1
+    min-width: 300px
+    &_right
+      padding: 40px 12px 40px 40px
+      display: flex
+      align-items: center
+  &__item
+    margin-bottom: 16px
+    color: $white
+    font-family: Nunito, sans-serif
+    font-size: 24px
+    font-weight: 400
+  &__link
+    color: $white
+    font-family: Nunito, sans-serif
+    font-size: 24px
+    &_email
+      font-weight: 700
+
+.swiper
+  &-pagination-bullet
+    background-color: hsla(176, 100%, 33%, 0.8)
+    &-active
+      background-color: $darkGreen
+.swiper-button-next, .swiper-button-prev
+  color: $darkGreen

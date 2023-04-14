@@ -1,0 +1,32 @@
+.header
+  padding: 4px 0
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background-color: $white
+  z-index: 120
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__right-block
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    flex-flow: wrap
+  &__btn__burger
+    display: none
+  &__link
+    padding: 4px 10px
+    -webkit-transition: color 150ms ease
+    transition: color 150ms ease
+    color: hsl(176, 100%, 33%)
+    font-size: 18px
+    line-height: 1.1
+    font-weight: 700
+    letter-spacing: 0.25px
+    text-decoration: none
+    text-transform: uppercase
+    &_lang
+      margin-right: 20px

@@ -1,15 +1,26 @@
 .hero
   padding: 240px 0
+  position: relative
   background: $turquoise url("../images/bg_hero_full.webp") left center no-repeat
   background-size: cover
+  &__shadow-wrapper
+    position: absolute
+    z-index: 10
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: hsla(0, 0%, 0%, 0.2)
   &__text
+    position: relative
+    z-index: 20
     margin-left: auto
-    max-width: 540px
+    max-width: 640px
     color: $white
     font-weight: 400
     p
       font-family: Nunito, sans-serif
-      font-size: 20px
+      font-size: 24px
       line-height: 1.5
       font-weight: 400
     .title_h1

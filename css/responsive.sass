@@ -73,8 +73,12 @@
     p
       text-align: justify
 
-  .advantages__item__image-wrapper
-    min-height: 380px
+  .advantages
+    &__item
+      flex-flow: column
+      &__image-wrapper
+        min-height: 380px
+        width: 100%
 
   .dignity__item
     padding: 64px 0

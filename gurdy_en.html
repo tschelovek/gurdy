@@ -442,7 +442,7 @@
         <div class="modal__close-wrapper">
           <button type="button" class="btn_close"><span>закрыть</span></button>
         </div>
-        <form action="#" class="modal__form" method="post" enctype="multipart/form-data" id="form_callback">
+        <form name="form_callback" action="#" class="modal__form" method="post" enctype="multipart/form-data" id="form_callback">
           <h4 class="modal__title">Callback form</h4>
           <div class="modal__fields-wrapper">
             <label for="fields[name_1]-2" class="label cc-light">Name</label>
@@ -469,9 +469,10 @@
               id="fields[6381_1][14263]-14264" required="">
           </div>
 
-          <div class="w-embed">
+          <div class="">
             <input type="hidden" name="form_id" value="1010307">
             <input type="hidden" name="hash" value="3904d2c832a7fd6d5134190237be3a73">
+            <input type="hidden" name="modalName" value="">
           </div>
           <div class="wrapper_center">
             <button type="submit" class="btn btn_orange btn_submit"></button>

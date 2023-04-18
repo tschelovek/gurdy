@@ -981,6 +981,8 @@ main img {
 .modal__content {
   padding: 32px;
   background-color: hsl(0deg, 0%, 100%);
+  width: 550px;
+  max-width: 100%;
 }
 .modal__title {
   margin-bottom: 20px;

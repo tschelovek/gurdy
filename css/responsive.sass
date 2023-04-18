@@ -1,21 +1,25 @@
-@media only screen and (max-width: 1324px)
-
 @media only screen and (max-width: 1024px)
   .title
     &_h1
       font-size: 52px
 
   .hero
-    padding: 180px 0
+    display: flex
+    flex-flow: column
+    justify-content: flex-end
+    height: 70vh
+    padding: 60px 40px
 
-@media only screen and (max-width: 864px)
+  .advantages__item__list
+    font-size: 18px
+    line-height: 1.5
 
 @media only screen and (max-width: 768px)
   .title
     &_h1
       font-size: 48px
     &_h2
-      font-size: 42px
+      font-size: 48px
 
   .header
     &__btn__burger
@@ -65,13 +69,34 @@
       &__list
         flex-flow: column
 
+  .hero
+    &__text
+      p
+        font-size: 16px
+    &__shadow-wrapper
+      background: linear-gradient(hsla(0, 0%, 0%, 0.15), hsla(0, 0%, 0%, 0.4))
+    .title_h1
+      font-size: 44px
+      line-height: 1.4
+
+  .about
+    &__mission p
+      font-size: 28px
+
+  .functions__divider
+    margin: 60px -20px 0
+    width: calc(100% + 40px)
+
+  .demo__title
+    line-height: 1.2
+
 @media only screen and (max-width: 640px)
   .title_h1
     font-size: 40px
 
-  .about__intro__text
-    p
-      text-align: justify
+  //.about__intro__text
+  //  p
+  //    text-align: justify
 
   .advantages
     &__item
@@ -99,22 +124,76 @@
     display: none
 
 @media only screen and (max-width: 480px)
-  .container
-    padding: 0 12px
-
   .title
     &_h1
       font-size: 40px
     &_h2
-      font-size: 36px
+      font-size: 30px
     &_h3
       font-size: 24px
+      text-align: center
 
-  .advantages__item__image-wrapper
-    min-height: 240px
+  .hero
+    padding: 60px 0
+    height: 55vh
+    .container
+      width: 80%
+    .title_h1
+      font-size: 36px
 
-  .dignity__item
-    padding: 40px 0
+  .about
+    padding: 0 0 80px
+    &__intro
+      &__image-wrapper
+        display: none
+      &__text p
+        padding: 0 10px
+        font-size: 12px
+    &__mission
+      padding: 0px 30px 20px
+      &__title
+        font-size: 14px
+      p
+        font-size: 20px
+      //&.quote
+
+  .advantages__item
+    &__image-wrapper
+      min-height: 240px
+    &__list
+      font-size: 14px
+      li
+        margin-bottom: 0
+
+  .functions
+    margin-top: 40px
+    &__list__item
+      font-size: 14px
+      &::before
+        top: 0
+
+  .dignity
+    &__item
+      padding: 40px 0
+    &__text
+      font-size: 12px
+      line-height: 150%
+      font-weight: 500
+      &_main
+        font-size: 14px
+        line-height: 1.3
+        text-align: center
+
+  .sla__text
+    font-size: 12px
+    line-height: 150%
+    font-weight: 500
+    text-align: left
+
+  .demo__title
+    font-size: 25px
+    line-height: 100%
+    text-align: center
 
   .contacts
     &__half-block_right

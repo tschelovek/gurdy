@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Nunito-Regular.woff2") format("woff2"), url("../fonts/Nunito-Regular.woff") format("woff"), url("../fonts/Nunito-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Nunito-Medium.woff2") format("woff2"), url("../fonts/Nunito-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Nunito-Bold.woff2") format("woff2"), url("../fonts/Nunito-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Podkova";
+  font-style: normal;
+  font-weight: 125 950;
+  src: local("Podkova[wght]"), url("../fonts/Podkova[wght].ttf") format("truetype");
+}
 /**
  * Swiper 9.1.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -690,38 +714,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
-@font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/nunito-regular-webfont.woff2") format("woff2"), url("../fonts/Nunito-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Nunito-Old";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/nunito-regular-webfont.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Podkova";
-  font-style: normal;
-  font-weight: 125 950;
-  src: local("Podkova[wght]"), url("../fonts/Podkova[wght].ttf") format("truetype");
-}
-/*@font-face {*/
-/*    font-family: 'Podkova';*/
-/*    font-style: normal;*/
-/*    font-display: swap;*/
-/*    font-weight: 700;*/
-/*    src: local('Podkova Bold '),*/
-/*    local('Podkova-Bold'),*/
-/*    url('../fonts/podkova-latin-700.woff2') format('woff2'),*/
-/*    url('../fonts/podkova-latin-700.woff') format('woff');*/
-/*}*/
-/*https://fonts.gstatic.com/s/podkova/v26/K2FxfZ1EmftJSV9VaJnzJw.woff2*/
-/*https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofINeaB.woff2*/
-/*https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofIMeaBXso.woff2*/
-/*https://fonts.gstatic.com/s/podkova/v26/K2FxfZ1EmftJSV9VaJ3zJ7Kh.woff2*/
 *, *::before, *::after {
   margin: 0;
   -moz-box-sizing: border-box;
@@ -762,6 +754,22 @@ input[type=number].no-arrows::-webkit-outer-spin-button, input[type=number].no-a
   margin: 0;
 }
 
+.bg_black {
+  background-color: hsl(0deg, 0%, 20%);
+  color: hsl(0deg, 0%, 100%);
+}
+.bg_turquoise {
+  background-color: hsla(176deg, 100%, 33%, 0.08);
+}
+
+.turquoise {
+  color: hsl(176deg, 100%, 33%);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 main {
   margin-top: 60px;
   font-size: 18px;
@@ -799,18 +807,6 @@ main img {
   font-size: 40px;
   font-weight: 600;
   color: hsl(187deg, 100%, 18%);
-}
-
-.bg_black {
-  background-color: hsl(0deg, 0%, 20%);
-  color: hsl(0deg, 0%, 100%);
-}
-.bg_turquoise {
-  background-color: hsla(176deg, 100%, 33%, 0.08);
-}
-
-.turquoise {
-  color: hsl(176deg, 100%, 33%);
 }
 
 .logo {
@@ -1054,6 +1050,15 @@ main img {
   background-color: hsl(187deg, 100%, 18%);
 }
 
+#scroll-progress {
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background: hsl(14deg, 100%, 68%);
+  z-index: 10000;
+}
+
 .header {
   padding: 4px 0;
   position: fixed;
@@ -1069,6 +1074,7 @@ main img {
   align-items: center;
 }
 .header__right-block {
+  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -1094,9 +1100,11 @@ main img {
 }
 
 .hero {
-  padding: 240px 0;
+  padding: 240px 40px;
   position: relative;
-  background: hsl(176deg, 100%, 33%) url("../images/bg_hero_full.webp") left center no-repeat;
+  height: 80vh;
+  background: hsl(176deg, 100%, 33%) url("../images/bg_hero_full.webp") no-repeat;
+  background-position: 0 0, 0% 25%, 0 0;
   background-size: cover;
 }
 .hero__shadow-wrapper {
@@ -1106,7 +1114,7 @@ main img {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: hsla(0deg, 0%, 0%, 0.2);
+  background: linear-gradient(hsla(0deg, 0%, 0%, 0.15), hsla(0deg, 0%, 0%, 0.4));
 }
 .hero__text {
   position: relative;
@@ -1180,6 +1188,9 @@ main img {
   align-items: center;
   flex-flow: wrap;
 }
+.advantages__item-wrapper {
+  height: auto;
+}
 .advantages__item_1 .advantages__item__image-wrapper {
   background: url("../images/assets/comp.svg") center center no-repeat;
 }
@@ -1214,19 +1225,21 @@ main img {
 }
 
 .functions__wrapper-lists {
-  margin-top: 32px;
+  margin-top: 40px;
   display: flex;
+  justify-content: center;
   flex-flow: wrap;
   column-gap: 20px;
 }
 .functions__list {
   min-width: 300px;
+  max-width: 480px;
   flex: 1;
 }
 .functions__list__item {
   padding-left: 20px;
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   font-family: Nunito, sans-serif;
   color: #000;
   font-size: 18px;
@@ -1241,14 +1254,23 @@ main img {
   display: inline-block;
   width: 12px;
   height: 12px;
-  border: 2px solid hsl(14deg, 100%, 68%);
+  border: 3px solid hsl(14deg, 100%, 68%);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
+.functions__divider {
+  margin-top: 60px;
+  width: 100%;
+  height: 3px;
+  background-color: hsla(14deg, 100%, 68%, 0.56);
+}
 
 .dignity {
   padding: 40px 0;
+}
+.dignity__list {
+  margin-top: 10px;
 }
 .dignity__item {
   padding: 80px 0;
@@ -1422,7 +1444,15 @@ main img {
     font-size: 52px;
   }
   .hero {
-    padding: 180px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    height: 70vh;
+    padding: 60px 40px;
+  }
+  .advantages__item__list {
+    font-size: 18px;
+    line-height: 1.5;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1430,7 +1460,7 @@ main img {
     font-size: 48px;
   }
   .title_h2 {
-    font-size: 42px;
+    font-size: 48px;
   }
   .header__btn__burger {
     display: flex;
@@ -1483,13 +1513,30 @@ main img {
   .header .nav__list {
     flex-flow: column;
   }
+  .hero__text p {
+    font-size: 16px;
+  }
+  .hero__shadow-wrapper {
+    background: linear-gradient(hsla(0deg, 0%, 0%, 0.15), hsla(0deg, 0%, 0%, 0.4));
+  }
+  .hero .title_h1 {
+    font-size: 44px;
+    line-height: 1.4;
+  }
+  .about__mission p {
+    font-size: 28px;
+  }
+  .functions__divider {
+    margin: 60px -20px 0;
+    width: calc(100% + 40px);
+  }
+  .demo__title {
+    line-height: 1.2;
+  }
 }
 @media only screen and (max-width: 640px) {
   .title_h1 {
     font-size: 40px;
-  }
-  .about__intro__text p {
-    text-align: justify;
   }
   .advantages__item {
     flex-flow: column;
@@ -1520,23 +1567,86 @@ main img {
   }
 }
 @media only screen and (max-width: 480px) {
-  .container {
-    padding: 0 12px;
-  }
   .title_h1 {
     font-size: 40px;
   }
   .title_h2 {
-    font-size: 36px;
+    font-size: 30px;
   }
   .title_h3 {
     font-size: 24px;
+    text-align: center;
+  }
+  .hero {
+    padding: 60px 0;
+    height: 55vh;
+  }
+  .hero .container {
+    width: 80%;
+  }
+  .hero .title_h1 {
+    font-size: 36px;
+  }
+  .about {
+    padding: 0 0 80px;
+  }
+  .about__intro__image-wrapper {
+    display: none;
+  }
+  .about__intro__text p {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  .about__mission {
+    padding: 0px 30px 20px;
+  }
+  .about__mission__title {
+    font-size: 14px;
+  }
+  .about__mission p {
+    font-size: 20px;
   }
   .advantages__item__image-wrapper {
     min-height: 240px;
   }
+  .advantages__item__list {
+    font-size: 14px;
+  }
+  .advantages__item__list li {
+    margin-bottom: 0;
+  }
+  .functions {
+    margin-top: 40px;
+  }
+  .functions__list__item {
+    font-size: 14px;
+  }
+  .functions__list__item::before {
+    top: 0;
+  }
   .dignity__item {
     padding: 40px 0;
+  }
+  .dignity__text {
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 500;
+  }
+  .dignity__text_main {
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: center;
+  }
+  .sla__text {
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 500;
+    text-align: left;
+  }
+  .demo__title {
+    font-size: 25px;
+    line-height: 100%;
+    text-align: center;
   }
   .contacts__half-block_right {
     padding: 40px 20px;

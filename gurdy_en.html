@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!--    <link rel="icon" href="./favicon.ico">-->
+  <!--    <link rel="apple-touch-icon" href="./apple-touch-icon.png">-->
+  <meta name="theme-color" content="#E6E8EC">
+  <title>Title</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/parallax.min.js"></script>
+  <script defer type="module" src="./js/main.js"></script>
+</head>
+<body>
+<div class="container_body">
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__logo logo logo_header">
+          <a href="/" class="logo__link">
+            <img srcset="./images/logo.webp, ./images/logo_x2.webp x2"
+                 src="./images/logo.jpg"
+                 alt=""
+                 title=""
+            >
+          </a>
+        </div>
+        <div class="header__right-block">
+          <a href="/gurdy/" class="header__link header__link_lang">RU</a>
+          <nav class="nav nav_header">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#s_functions" class="nav__link header__link">FEATURES</a>
+              </li>
+              <li class="nav__item">
+                <a href="#s_dignity" class="nav__link header__link">advantages</a>
+              </li>
+              <li class="nav__item">
+                <a href="#s_demo" class="nav__link header__link">demonstration</a>
+              </li>
+              <li class="nav__item">
+                <a href="#s_contacts" class="nav__link header__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <button type="button" id="burgerButton" class="btn_burger header__btn__burger">
+          <span>menu</span>
+        </button>
+      </div>
+    </div>
+    <div id="scroll-progress"></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__shadow-wrapper"></div>
+      <div class="container">
+        <div class="hero__text">
+          <h1 class="title_h1">Gurdy</h1>
+          <p>High-tech platform to provide the cloud-based PBX under your brand with
+            online-billing and guaranteed uptime 99.99%</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="s_about">
+      <div class="container">
+        <div class="about__intro">
+          <div class="about__intro__image-wrapper"></div>
+          <div class="about__intro__text">
+            <h2 class="title_h3">What is Gurdy</h2>
+            <p>Gurdy is a voice platform for telecom operators providing a cloud PBX. It is a high-tech
+              industrial-level solution offering the maximum level of automation when connecting,
+              providing and servicing customers and communication services. Gurdy guarantees high
+              performance, reliability, fault tolerance, service safety, maintaining high quality
+              parameters even under heavy workload.</p>
+          </div>
+        </div>
+        <div class="about__mission quote">
+          <h3 class="about__mission__title">OUR MISSION</h3>
+          <p>We help your subscribers achieve more through better control of their communication with their
+            customers</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages" id="s_advantages">
+      <div class="container">
+        <h2 class="title_h2">Gurdy platform is</h2>
+      </div>
+
+      <div class="advantages__list swiper" id="slider_advantages">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide advantages__item-wrapper bg_turquoise">
+            <div class="container">
+              <div class="advantages__item advantages__item_1">
+                <div class="advantages__item__image-wrapper"></div>
+                <div class="advantages__item__text-block">
+                  <h3 class="title_h3">A competitive advantage</h3>
+                  <ul class="advantages__item__list">
+                    <li>One more channel to get new customers</li>
+                    <li>Ease of operation</li>
+                    <li>Your own hi-tech product</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide advantages__item-wrapper">
+            <div class="container">
+              <div class="advantages__item advantages__item_2">
+                <div class="advantages__item__image-wrapper"></div>
+                <div class="advantages__item__text-block">
+                  <h3 class="title_h3">Design and features</h3>
+                  <ul class="advantages__item__list">
+                    <li>Branding with your logo, colors and fonts</li>
+                    <li>Subscriber's web-interface to manage cloud-PBX and IP-telephony</li>
+                    <li>Can connect a phone numbers provided by other telecommunications providers
+                    </li>
+                    <li>Provider's interface for work and customer service</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide advantages__item-wrapper bg_turquoise">
+            <div class="container">
+              <div class="advantages__item advantages__item_3">
+                <div class="advantages__item__image-wrapper"></div>
+                <div class="advantages__item__text-block">
+                  <h3 class="title_h3">Automation and integration</h3>
+                  <ul class="advantages__item__list">
+                    <li>Integration with payment systems for payment flexibility</li>
+                    <li>Integration with SMS-aggregators to confirm operations and sign-ins</li>
+                    <li>Built-in online billing which can be integrated with communications
+                      provider's automatic billing system
+                    </li>
+                    <li>Automation of connection and providing of IP-telephony and hosted PBX to
+                      your subscribers
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide advantages__item-wrapper ">
+            <div class="container">
+              <div class="advantages__item advantages__item_4">
+                <div class="advantages__item__image-wrapper"></div>
+                <div class="advantages__item__text-block">
+                  <h3 class="title_h3">Opportunities and a valuable asset</h3>
+                  <ul class="advantages__item__list">
+                    <li>Download and update tariff rates for call directions</li>
+                    <li>Low cost of ownership</li>
+                    <li>Instruments for IP telephony operation — access to tracing</li>
+                    <li>Integrability with FMC</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <!--                <div class="swiper-button-prev"></div>-->
+        <!--                <div class="swiper-button-next"></div>-->
+      </div>
+    </section>
+
+    <section class="functions" id="s_functions">
+      <div class="container">
+        <h2 class="title_h2">Hosted PBX features for customers</h2>
+        <div class="functions__wrapper-lists">
+          <ul class="functions__list">
+            <li class="functions__list__item">Call statistics</li>
+            <li class="functions__list__item">Hosted PBX dashboard with key metrics</li>
+            <li class="functions__list__item">Создание сотрудников, настройка учетной записи SIP, настройка
+              переадресации
+            </li>
+            <li class="functions__list__item">Set up your company's business hours</li>
+            <li class="functions__list__item">Grant employees access to profiles with different permissions</li>
+            <li class="functions__list__item">Set up algorithms to process incoming calls and viocemails</li>
+            <li class="functions__list__item">Connect phone numbers issued by other communications providers</li>
+            <li class="functions__list__item">Integration with end-to-end analytics and call tracking system</li>
+            <li class="functions__list__item">Black- and whitelists</li>
+          </ul>
+          <ul class="functions__list">
+            <li class="functions__list__item">Automatically set up IP telephony from your profile</li>
+            <li class="functions__list__item">E-shop to connect phone numbers and enable services online</li>
+            <li class="functions__list__item">Record calls and store them for a year</li>
+            <li class="functions__list__item">Voicemail greetings, ringback tune</li>
+            <li class="functions__list__item">Multi-level voice menus</li>
+            <li class="functions__list__item">Payment and subtraction history, financial documents for a desired period
+              of time
+            </li>
+            <li class="functions__list__item">Open API for integration with CRM and other cloud based services</li>
+            <li class="functions__list__item">Use mobile app for calls</li>
+            <li class="functions__list__item underline">And a many more useful features!</li>
+          </ul>
+        </div>
+        <div class="functions__btn-wrapper wrapper_center">
+          <button
+            class="btn btn_orange callback__submit callback_init"
+            type="button"
+            data-title="Ask for demonstration"
+          >
+            ask for demonstration
+          </button>
+        </div>
+        <div class="functions__divider"></div>
+      </div>
+    </section>
+
+    <section class="dignity" id="s_dignity">
+      <div class="container">
+        <h2 class="title_h2">Gurdy's advantages</h2>
+      </div>
+      <div class="dignity__list">
+        <div class="dignity__item bg_turquoise">
+          <div class="container">
+            <div class="dignity__item__image-wrapper">
+              <img src="./images/assets/arch2.svg" alt="">
+            </div>
+            <div class="dignity__item__text-block">
+              <h3 class="title_h3">Architecture</h3>
+              <p class="dignity__text">
+                Gurdy platform is created as a distributed high-performance system that provides excellent voice quality
+                and continuous communication services. The platform is located in 4 data centers connected by
+                communication channels. If required, the platform components are easily scaled, and when the load
+                increases, the platform is easily distributed to new hardware resources.
+              </p>
+              <p class="dignity__text_main">
+                GURDY — IT IS A TRUE CLOUD SERVICE
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dignity__item dignity__item_reverse">
+          <div class="container">
+            <div class="dignity__item__image-wrapper">
+              <img src="./images/dig2.svg" alt="">
+            </div>
+            <div class="dignity__item__text-block">
+              <h3 class="title_h3">Performance</h3>
+              <p class="dignity__text">
+                10,000 active virtual PBX is a guaranteed resource of one Gurdy installation with the maintenance of
+                quality under high load.
+              </p>
+              <p class="dignity__text_main">
+                GURDY – IT IS A GREAT RESULT IN EVERY SITUATION
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dignity__item bg_turquoise">
+          <div class="container">
+            <div class="dignity__item__image-wrapper">
+              <img src="./images/dig3.svg" alt="">
+            </div>
+            <div class="dignity__item__text-block">
+              <h3 class="title_h3">Reliability</h3>
+              <p class="dignity__text">
+                We have been using the platform for more than 6 years and for all this time there has not been a single
+                denial of service due to software or network equipment failure.
+              </p>
+              <p class="dignity__text_main">
+                GURDY – IT IS SOUND SLEEP FOR YOUR ADMINS
+              </p>
+            </div>
+            <div class="dignity__item__btn-wrapper wrapper_center">
+              <button
+                class="btn btn_orange callback__submit callback_init"
+                type="button"
+                data-title="Learn more"
+              >
+                LEARN MORE
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="dignity__item dignity__item_reverse">
+          <div class="container">
+            <div class="dignity__item__image-wrapper">
+              <img src="./images/dig4.svg" alt="">
+            </div>
+            <div class="dignity__item__text-block">
+              <h3 class="title_h3">Efficiency</h3>
+              <p class="dignity__text">
+                Our approach is to minimize human errors and maximal automation. Everythig that machine can do must be
+                automated. Employees should be relieved of routine.
+              </p>
+              <p class="dignity__text_main">
+                GURDY – IT IS WORKING MACHINES, NOT MEN
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dignity__item bg_turquoise">
+          <div class="container">
+            <div class="dignity__item__image-wrapper">
+              <img src="./images/dig5.svg" alt="">
+            </div>
+            <div class="dignity__item__text-block">
+              <h3 class="title_h3">UX</h3>
+              <p class="dignity__text">
+                We have combined experience in the field of telecommunications and technical experience. The product
+                should be easy to use, and the interface of the virtual PBX should not cause confusion.
+              </p>
+              <p class="dignity__text_main">
+                GURDY – IT IS COMFORT OF USAGE
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sla" id="s_sla">
+      <div class="container">
+        <div class="sla__wrapper">
+          <h2 class="title_h2">SLA 99.99% guarantee</h2>
+          <div class="sla__image-wrapper">
+            <img src="./images/assets/sla.svg" alt="">
+          </div>
+          <p class="sla__text">
+            We guarantee the availability of the service at a level not lower than <span class="turquoise">99,99%</span>
+            and we are financially responsible for keeping this parameter. This isprovided by monitoring the operation
+            and correct usage of the platform.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo" id="s_demo">
+      <div class="container">
+        <div class="wrapper_center">
+          <div class="demo__image-wrapper">
+            <div id="scene">
+              <div data-depth="0.6">
+                <img src="./images/jin.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="title_h2 demo__title">Sign up for a demonstration of Gurdy platform to learn more</h2>
+        <div class="wrapper_center">
+          <button
+            class="btn btn_orange callback__submit callback_init"
+            type="button"
+            data-title="Sign up for a demonstration"
+          >
+            Sign up
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" id="s_contacts">
+      <div class="contacts__half-block contacts__half-block_left">
+        <div class="map" id="map">
+          <script type="text/javascript" charset="utf-8" async
+                  src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae15bbfb469bd0a392e2d10a46de290c048b380316b659c5638ba21c5c6e3588b&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false">
+          </script>
+        </div>
+      </div>
+      <div class="contacts__half-block contacts__half-block_right">
+        <ul class="contacts__list contacts__list">
+          <li class="contacts__item contacts__item_address">
+            <div class="">Russia, Saint-Petersburg,<br>
+              11A, Sedova Str, Suite 916<br>
+              192019
+            </div>
+          </li>
+          <li class="contacts__item">
+            <a href="tel:78127700040" class="contacts__link contacts__link_phone">
+              <span class="contacts__phone__number">+7 812 770 0040</span>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a href="mailto:info@gurdy.ru" class="contacts__link contacts__link_email">info@gurdy.ru</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__logo logo logo_footer">
+          <a href="#" class="logo__link">
+            <img src="./images/white_logo.svg"
+                 class="logo__img"
+                 alt=""
+                 title=""
+            >
+          </a>
+        </div>
+        <nav class="nav nav_footer">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#s_about" class="nav__link">What is Gurdy?</a>
+            </li>
+            <li class="nav__item">
+              <a href="#s_advantages" class="nav__link">Gurdy for providers</a>
+            </li>
+            <li class="nav__item">
+              <a href="#s_dignity" class="nav__link">Advantages</a>
+            </li>
+            <li class="nav__item">
+              <a href="#s_functions" class="nav__link">Features of hosted PBX</a>
+            </li>
+            <li class="nav__item">
+              <a href="#s_sla" class="nav__link">SLA 99.99%</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="callback footer__top__callback">
+          <h4 class="callback__title">Schedule demo</h4>
+          <button
+            class="btn btn_orange callback__submit callback_init"
+            type="button"
+            data-title="Contact us"
+          >
+            Contact us
+          </button>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">© 2022 KNV LTD</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog">
+      <div class="modal__content">
+        <div class="modal__close-wrapper">
+          <button type="button" class="btn_close"><span>закрыть</span></button>
+        </div>
+        <form action="#" class="modal__form" method="post" enctype="multipart/form-data" id="form_callback">
+          <h4 class="modal__title">Callback form</h4>
+          <div class="modal__fields-wrapper">
+            <label for="fields[name_1]-2" class="label cc-light">Name</label>
+            <input type="text"
+                   class="modal__input"
+                   autofocus="true"
+                   maxlength="256"
+                   name="fields[name_1]"
+                   data-name="fields[name_1]"
+                   placeholder=""
+                   id="fields[name_1]-2"
+                   required="">
+            <label
+              for="fields[6379_1][14251]-14252" class="label cc-light">Phone</label>
+            <input
+              type="tel" class="modal__input" maxlength="256" name="fields[6379_1][14251]"
+              data-name="fields[6379_1][14251]" placeholder="+7 999 9999999"
+              id="fields[6379_1][14251]-14252" required="">
+            <label for="fields[6381_1][14263]-14264"
+                   class="label cc-light">Email</label>
+            <input
+              type="email" class="modal__input" maxlength="256" name="fields[6381_1][14263]"
+              data-name="fields[6381_1][14263]" placeholder="example@company.ru"
+              id="fields[6381_1][14263]-14264" required="">
+          </div>
+
+          <div class="w-embed">
+            <input type="hidden" name="form_id" value="1010307">
+            <input type="hidden" name="hash" value="3904d2c832a7fd6d5134190237be3a73">
+          </div>
+          <div class="wrapper_center">
+            <button type="submit" class="btn btn_orange btn_submit"></button>
+            <div class="modal__status"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

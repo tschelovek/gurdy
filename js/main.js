@@ -11,11 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const ERROR_MESSAGE = 'При отправке произошли проблемы! Повторите попытку позже или свяжитесь с нами иными способами!';
     const modal = document.getElementById('modal');
 
-
-    modal.querySelector('.btn_close').addEventListener('click', () => handlerCloseCallback());
+    modal.querySelector('.modal__dialog').addEventListener('click', e => {
+        if (e.target === e.currentTarget) handlerCloseModal()
+    });
+    modal.querySelector('.btn_close').addEventListener('click', () => handlerCloseModal());
     document.querySelectorAll('.callback_init')
         .forEach(button => button.addEventListener('click', e => handlerOpenCallback(e.currentTarget)));
-
 
     function handlerOpenCallback(eTarget) {
         modal.style.display = 'block';
@@ -23,9 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.querySelector('.btn_submit').textContent = eTarget.textContent;
         modal.querySelector('.modal__title').textContent = eTarget.dataset.title;
+
+        document.addEventListener(
+            'keydown',
+            e => { if (e.key === "Escape") handlerCloseModal() },
+            { once: true }
+        )
     }
 
-    function handlerCloseCallback() {
+    function handlerCloseModal() {
         modal.classList.remove('open');
         modal.querySelector('.modal__status').textContent = '';
         setTimeout(() => modal.style.display = 'none', 600);
@@ -45,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
         } catch (err) {
             messageContainer.textContent = ERROR_MESSAGE;
-            console.error(err)
+            console.error(err);
         }
     })
 
@@ -92,15 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         speed: 1000,
         breakpoints: {
-            320: {
-                autoHeight: true,
-            },
             640: {
+                autoplay: false,
                 grid: {
                     rows: 4
-                }
+                },
+                allowTouchMove: false,
             },
-            autoHeight: false,
         }
     })
 
@@ -109,4 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     const parallaxInstance1 = new Parallax(document.getElementById('scene'));
 
+    /**
+     * Scroll progress-bar
+     */
+    const scrollProgress = document.getElementById('scroll-progress');
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
+    });
 })

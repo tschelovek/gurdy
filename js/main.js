@@ -26,8 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       await postData(POST_FORM_URL, data)
-        .then(() => {
-          messageContainer.textContent = SUCCESS_MESSAGE;
+        .then((res) => {
+          if (res.ok) {
+            messageContainer.textContent = SUCCESS_MESSAGE;
+          } else {
+            messageContainer.textContent = ERROR_MESSAGE;
+          }
         })
     } catch (err) {
       messageContainer.textContent = ERROR_MESSAGE;

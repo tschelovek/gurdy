@@ -59,7 +59,7 @@
       opacity: 0.8
       font-size: 20px
       font-weight: 600
-      color: hsla(176, 100%, 33%, 0.8)
+      color: $turquoiseLight
     p
       font-family: Podkova, sans-serif
       font-size: 35px
@@ -129,7 +129,7 @@
         display: inline-block
         width: 12px
         height: 12px
-        border: 3px solid hsl(14, 100%, 68%)
+        border: 3px solid $orange
         -webkit-border-radius: 50%
         -moz-border-radius: 50%
         border-radius: 50%
@@ -231,12 +231,15 @@
     color: $white
     font-family: Nunito, sans-serif
     font-size: 24px
+    transition: color 200ms ease-in-out
     &_email
       font-weight: 700
+    &:hover
+      color: $turquoiseLight
 
 .swiper
   &-pagination-bullet
-    background-color: hsla(176, 100%, 33%, 0.8)
+    background-color: $turquoiseLight
     &-active
       background-color: $darkGreen
 .swiper-button-next, .swiper-button-prev

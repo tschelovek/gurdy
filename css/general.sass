@@ -114,6 +114,7 @@ main
     background-color: inherit
     border: none
     z-index: 107
+    cursor: pointer
     &:focus
       outline: none
     &:focus-visible
@@ -191,6 +192,7 @@ main
     white-space: nowrap
     font-size: 18px
     font-weight: 700
+    transition: color 200ms ease-in-out
 
 .modal
   position: fixed
@@ -285,7 +287,5 @@ main
   bottom: 0
   width: 0%
   height: 3px
-  background: hsl(14, 100%, 68%)
+  background: $orange
   z-index: 10000
-
-

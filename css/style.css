@@ -731,8 +731,8 @@ html {
   }
 }
 body {
-  background-color: hsl(0deg, 0%, 100%);
-  color: hsl(0deg, 0%, 20%);
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 20%);
   font-family: Podkova, sans-serif;
 }
 
@@ -755,15 +755,15 @@ input[type=number].no-arrows::-webkit-outer-spin-button, input[type=number].no-a
 }
 
 .bg_black {
-  background-color: hsl(0deg, 0%, 20%);
-  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 100%);
 }
 .bg_turquoise {
-  background-color: hsla(176deg, 100%, 33%, 0.08);
+  background-color: hsla(176, 100%, 33%, 0.08);
 }
 
 .turquoise {
-  color: hsl(176deg, 100%, 33%);
+  color: hsl(176, 100%, 33%);
 }
 
 .underline {
@@ -795,7 +795,7 @@ main img {
 }
 
 .title_h2 {
-  color: hsl(176deg, 100%, 33%);
+  color: hsl(176, 100%, 33%);
   font-size: 50px;
   line-height: 1;
   font-family: Podkova, sans-serif;
@@ -806,7 +806,7 @@ main img {
   margin: 10px 0;
   font-size: 40px;
   font-weight: 600;
-  color: hsl(187deg, 100%, 18%);
+  color: hsl(187, 100%, 18%);
 }
 
 .logo {
@@ -832,7 +832,7 @@ main img {
   display: block;
   max-width: 300px;
   margin-top: 10px;
-  background-color: hsl(14deg, 100%, 68%);
+  background-color: hsl(14, 100%, 68%);
   color: #fff;
   font-family: Podkova, sans-serif;
   font-size: 20px;
@@ -842,7 +842,7 @@ main img {
   transition: background-color 0.3s;
 }
 .btn_orange:hover {
-  background-color: hsl(7deg, 100%, 60%);
+  background-color: hsl(7, 100%, 60%);
 }
 .btn_burger {
   padding: 0;
@@ -856,6 +856,7 @@ main img {
   background-color: inherit;
   border: none;
   z-index: 107;
+  cursor: pointer;
 }
 .btn_burger:focus {
   outline: none;
@@ -867,7 +868,7 @@ main img {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: hsl(187deg, 100%, 18%);
+  background-color: hsl(187, 100%, 18%);
   transition: transform 0.3s, background-color 0.3s ease-out;
 }
 .btn_burger span::before, .btn_burger span::after {
@@ -877,7 +878,7 @@ main img {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: hsl(187deg, 100%, 18%);
+  background-color: hsl(187, 100%, 18%);
   transition: transform 0.3s ease-in-out;
 }
 .btn_burger span::before {
@@ -890,12 +891,12 @@ main img {
   background-color: transparent;
 }
 .btn_burger.active span::before {
-  background-color: hsl(176deg, 100%, 33%);
+  background-color: hsl(176, 100%, 33%);
   transform: rotate(45deg);
   top: 9px;
 }
 .btn_burger.active span::after {
-  background-color: hsl(176deg, 100%, 33%);
+  background-color: hsl(176, 100%, 33%);
   transform: rotate(-45deg);
   bottom: 9px;
 }
@@ -912,7 +913,7 @@ main img {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: hsl(187deg, 100%, 18%);
+  background-color: hsl(187, 100%, 18%);
   transform: rotate(45deg);
   transition: background-color 0.3s;
 }
@@ -925,12 +926,12 @@ main img {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: hsl(187deg, 100%, 18%);
+  background-color: hsl(187, 100%, 18%);
   transform: rotate(90deg);
   transition: background-color 0.3s;
 }
 .btn_close:hover span, .btn_close:hover span::before {
-  background-color: hsl(176deg, 100%, 33%);
+  background-color: hsl(176, 100%, 33%);
 }
 
 .nav__list {
@@ -947,6 +948,7 @@ main img {
   white-space: nowrap;
   font-size: 18px;
   font-weight: 700;
+  transition: color 200ms ease-in-out;
 }
 
 .modal {
@@ -964,7 +966,7 @@ main img {
 .modal.open {
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: hsla(0deg, 0%, 0%, 0.5);
+  background-color: hsla(0, 0%, 0%, 0.5);
 }
 .modal.open .modal__dialog {
   transform: translateY(0);
@@ -980,7 +982,7 @@ main img {
 }
 .modal__content {
   padding: 32px;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   width: 550px;
   max-width: 100%;
 }
@@ -990,7 +992,7 @@ main img {
   line-height: 1.4;
   font-weight: 400;
   text-align: center;
-  color: hsl(176deg, 100%, 33%);
+  color: hsl(176, 100%, 33%);
 }
 .modal__close-wrapper {
   display: flex;
@@ -1004,7 +1006,7 @@ main img {
 .modal__fields-wrapper label {
   font-size: 20px;
   text-transform: uppercase;
-  color: hsla(176deg, 100%, 33%, 0.8);
+  color: hsla(176, 100%, 33%, 0.8);
 }
 .modal__input {
   margin-bottom: 18px;
@@ -1024,14 +1026,14 @@ main img {
   text-align: left;
 }
 .modal__input::placeholder {
-  color: hsl(217deg, 17%, 91%);
+  color: hsl(217, 17%, 91%);
   font-weight: 300;
 }
 .modal__input:active {
-  border-color: hsl(222deg, 7%, 28%);
+  border-color: hsl(222, 7%, 28%);
 }
 .modal__input:focus {
-  outline: hsl(217deg, 17%, 91%);
+  outline: hsl(217, 17%, 91%);
 }
 .modal .btn_submit {
   margin-top: 32px;
@@ -1040,7 +1042,7 @@ main img {
 .quote {
   padding: 8px 30px 20px;
   position: relative;
-  border-bottom: 3px solid hsla(14deg, 100%, 68%, 0.56);
+  border-bottom: 3px solid hsla(14, 100%, 68%, 0.56);
 }
 .quote::before {
   content: "";
@@ -1049,7 +1051,7 @@ main img {
   left: 0;
   bottom: 20px;
   width: 5px;
-  background-color: hsl(187deg, 100%, 18%);
+  background-color: hsl(187, 100%, 18%);
 }
 
 #scroll-progress {
@@ -1057,7 +1059,7 @@ main img {
   bottom: 0;
   width: 0%;
   height: 3px;
-  background: hsl(14deg, 100%, 68%);
+  background: hsl(14, 100%, 68%);
   z-index: 10000;
 }
 
@@ -1067,7 +1069,7 @@ main img {
   top: 0;
   left: 0;
   right: 0;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   z-index: 120;
 }
 .header__wrapper {
@@ -1088,8 +1090,8 @@ main img {
 .header__link {
   padding: 4px 10px;
   -webkit-transition: color 150ms ease;
-  transition: color 150ms ease;
-  color: hsl(176deg, 100%, 33%);
+  transition: color 200ms ease-in-out;
+  color: hsl(176, 100%, 33%);
   font-size: 18px;
   line-height: 1.1;
   font-weight: 700;
@@ -1100,12 +1102,15 @@ main img {
 .header__link_lang {
   margin-right: 20px;
 }
+.header__link:hover {
+  color: hsl(14, 100%, 68%);
+}
 
 .hero {
   padding: 240px 40px;
   position: relative;
   height: 80vh;
-  background: hsl(176deg, 100%, 33%) url("../images/bg_hero_full.webp") no-repeat;
+  background: hsl(176, 100%, 33%) url("../images/bg_hero_full.webp") no-repeat;
   background-position: 0 0, 0% 25%, 0 0;
   background-size: cover;
 }
@@ -1116,14 +1121,14 @@ main img {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(hsla(0deg, 0%, 0%, 0.15), hsla(0deg, 0%, 0%, 0.4));
+  background: linear-gradient(hsla(0, 0%, 0%, 0.15), hsla(0, 0%, 0%, 0.4));
 }
 .hero__text {
   position: relative;
   z-index: 20;
   margin-left: auto;
   max-width: 640px;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: 400;
 }
 .hero__text p {
@@ -1159,7 +1164,7 @@ main img {
   font-weight: 400;
 }
 .about__intro__image-wrapper {
-  background: hsl(0deg, 0%, 100%) url("../images/bg1.svg") center center no-repeat;
+  background: hsl(0, 0%, 100%) url("../images/bg1.svg") center center no-repeat;
   min-width: 230px;
   min-height: 230px;
   flex: 5;
@@ -1172,13 +1177,13 @@ main img {
   opacity: 0.8;
   font-size: 20px;
   font-weight: 600;
-  color: hsla(176deg, 100%, 33%, 0.8);
+  color: hsla(176, 100%, 33%, 0.8);
 }
 .about__mission p {
   font-family: Podkova, sans-serif;
   font-size: 35px;
   font-weight: 500;
-  color: hsl(176deg, 100%, 33%);
+  color: hsl(176, 100%, 33%);
 }
 
 .advantages__list {
@@ -1256,7 +1261,7 @@ main img {
   display: inline-block;
   width: 12px;
   height: 12px;
-  border: 3px solid hsl(14deg, 100%, 68%);
+  border: 3px solid hsl(14, 100%, 68%);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -1265,7 +1270,7 @@ main img {
   margin-top: 60px;
   width: 100%;
   height: 3px;
-  background-color: hsla(14deg, 100%, 68%, 0.56);
+  background-color: hsla(14, 100%, 68%, 0.56);
 }
 
 .dignity {
@@ -1312,7 +1317,7 @@ main img {
 }
 .dignity__text_main {
   opacity: 0.8;
-  color: hsl(176deg, 100%, 33%);
+  color: hsl(176, 100%, 33%);
   font-size: 20px;
   line-height: 20px;
   font-weight: 600;
@@ -1338,7 +1343,7 @@ main img {
   line-height: 1.5;
 }
 .sla .container {
-  border-bottom: 3px solid hsla(14deg, 100%, 68%, 0.56);
+  border-bottom: 3px solid hsla(14, 100%, 68%, 0.56);
 }
 
 .demo {
@@ -1356,13 +1361,13 @@ main img {
   line-height: 1.4;
   font-weight: 400;
   text-align: center;
-  color: hsl(176deg, 100%, 33%);
+  color: hsl(176, 100%, 33%);
 }
 
 .contacts {
   display: flex;
   flex-flow: wrap-reverse;
-  background-color: hsl(187deg, 100%, 18%);
+  background-color: hsl(187, 100%, 18%);
 }
 .contacts__half-block {
   flex: 1;
@@ -1375,35 +1380,39 @@ main img {
 }
 .contacts__item {
   margin-bottom: 16px;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-family: Nunito, sans-serif;
   font-size: 24px;
   font-weight: 400;
 }
 .contacts__link {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-family: Nunito, sans-serif;
   font-size: 24px;
+  transition: color 200ms ease-in-out;
 }
 .contacts__link_email {
   font-weight: 700;
 }
+.contacts__link:hover {
+  color: hsla(176, 100%, 33%, 0.8);
+}
 
 .swiper-pagination-bullet {
-  background-color: hsla(176deg, 100%, 33%, 0.8);
+  background-color: hsla(176, 100%, 33%, 0.8);
 }
 .swiper-pagination-bullet-active {
-  background-color: hsl(187deg, 100%, 18%);
+  background-color: hsl(187, 100%, 18%);
 }
 
 .swiper-button-next, .swiper-button-prev {
-  color: hsl(187deg, 100%, 18%);
+  color: hsl(187, 100%, 18%);
 }
 
 .footer {
   padding: 40px 0;
-  background-color: hsl(187deg, 100%, 18%);
-  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(187, 100%, 18%);
+  color: hsl(0, 0%, 100%);
   font-size: 18px;
 }
 .footer__top {
@@ -1417,7 +1426,7 @@ main img {
 }
 .footer__bottom {
   padding-top: 40px;
-  border-top: 3px solid hsl(212deg, 38%, 92%);
+  border-top: 3px solid hsl(212, 38%, 92%);
 }
 .footer .nav {
   flex: 2;
@@ -1428,7 +1437,10 @@ main img {
   justify-content: center;
 }
 .footer .nav__link {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+}
+.footer .nav__link:hover {
+  color: hsla(176, 100%, 33%, 0.8);
 }
 .footer .callback {
   padding-top: 4px;
@@ -1503,7 +1515,7 @@ main img {
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 80;
-    background-color: hsl(0deg, 0%, 100%);
+    background-color: hsl(0, 0%, 100%);
   }
   .header .nav_header.active {
     -webkit-transform: translateY(60px);
@@ -1519,7 +1531,7 @@ main img {
     font-size: 16px;
   }
   .hero__shadow-wrapper {
-    background: linear-gradient(hsla(0deg, 0%, 0%, 0.15), hsla(0deg, 0%, 0%, 0.4));
+    background: linear-gradient(hsla(0, 0%, 0%, 0.15), hsla(0, 0%, 0%, 0.4));
   }
   .hero .title_h1 {
     font-size: 44px;

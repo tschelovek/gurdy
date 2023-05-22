@@ -80,12 +80,20 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    *
    * Бургер меню
+   *
    */
   document.getElementById('burgerButton')?.addEventListener('click', e => {
     e.preventDefault();
     e.currentTarget.classList.toggle('active');
     document.querySelector('.nav_header')?.classList.toggle('active');
   })
+
+  document.querySelectorAll('.nav_header .header__link')
+    .forEach(link => link.addEventListener('click', () => {
+        document.querySelector('.nav_header').classList.remove('active');
+        document.getElementById('burgerButton').classList.remove('active');
+      }
+    ))
 
   /**
    *

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const POST_FORM_URL = '/telegram-bot/';
   const SUCCESS_MESSAGE = 'Ваша заявка успешно отправлена';
-  const ERROR_MESSAGE = 'При отправке произошли проблемы! Повторите попытку позже или свяжитесь с нами иными способами!';
+  const ERROR_MESSAGE = 'Ошибка при отправке формы';
   const modal = document.getElementById('modal');
 
   modal.querySelector('.modal__dialog').addEventListener('click', e => {
@@ -80,12 +80,20 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    *
    * Бургер меню
+   *
    */
   document.getElementById('burgerButton')?.addEventListener('click', e => {
     e.preventDefault();
     e.currentTarget.classList.toggle('active');
     document.querySelector('.nav_header')?.classList.toggle('active');
   })
+
+  document.querySelectorAll('.nav_header .header__link')
+    .forEach(link => link.addEventListener('click', () => {
+        document.querySelector('.nav_header').classList.remove('active');
+        document.getElementById('burgerButton').classList.remove('active');
+      }
+    ))
 
   /**
    *

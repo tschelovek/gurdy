@@ -6,26 +6,28 @@ document.addEventListener('DOMContentLoaded', () => {
    * чтоб повесить хэндлер открытия модального окна
    *
    */
-  const POST_FORM_URL = '/telegram-bot/';
+  const POST_FORM_URL = 'https://lk.gurdy.ru/rest/public/staff/notify';
   const SUCCESS_MESSAGE = 'Ваша заявка успешно отправлена';
-  const ERROR_MESSAGE = 'При отправке произошли проблемы! Повторите попытку позже или свяжитесь с нами иными способами!';
+  const ERROR_MESSAGE = 'При отправке произошли проблемы! Повторите попытку позже или свяжитесь с нами иными способами.';
   const modal = document.getElementById('modal');
 
   modal.querySelector('.modal__dialog').addEventListener('click', e => {
     if (e.target === e.currentTarget) handlerCloseModal()
   });
   modal.querySelector('.btn_close').addEventListener('click', () => handlerCloseModal());
+
   document.querySelectorAll('.callback_init')
     .forEach(button => button.addEventListener('click', e => handlerOpenCallback(e.currentTarget)));
+
   document.form_callback.addEventListener('submit', async e => {
     e.preventDefault();
 
-    const form = document.getElementById('form_callback');
     const messageContainer = modal.querySelector('.modal__status');
-    const data = new FormData(form)
 
     try {
-      await postData(POST_FORM_URL, data)
+      const myMessage = getStringFromInputs();
+
+      await postData(POST_FORM_URL, {message: myMessage})
         .then((res) => {
           if (res.ok) {
             messageContainer.textContent = SUCCESS_MESSAGE;
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         })
     } catch (err) {
-      messageContainer.textContent = ERROR_MESSAGE;
+        messageContainer.textContent = ERROR_MESSAGE;
       console.error(err);
     }
   })
@@ -68,13 +70,21 @@ document.addEventListener('DOMContentLoaded', () => {
       mode: 'cors',
       credentials: 'same-origin',
       headers: {
-        'Content-Type': 'form/multipart'
+        'Content-Type': 'application/json'
       },
-      body: data
+      body: JSON.stringify(data)
     })
       .catch(() => {
         throw Error
       })
+  }
+
+  function getStringFromInputs() {
+    const inputNameValue = document.getElementById('callback_name')?.value.trim();
+    const inputEmailValue = document.getElementById('callback_email')?.value.trim();
+    const inputPhoneValue = document.getElementById('callback_tel')?.value.trim();
+
+    return `${inputNameValue}, ${inputPhoneValue}, ${inputEmailValue}`
   }
 
   /**

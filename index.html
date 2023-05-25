@@ -463,28 +463,19 @@
         <form name="form_callback" action="#" class="modal__form" method="post" enctype="multipart/form-data" id="form_callback">
           <h4 class="modal__title">Форма обратной связи</h4>
           <div class="modal__fields-wrapper">
-            <label for="fields[name_1]-2" class="label cc-light"> Ваше Имя</label>
-            <input type="text"
-                   class="modal__input"
-                   autofocus="true"
-                   maxlength="256"
-                   name="fields[name_1]"
-                   data-name="fields[name_1]"
-                   placeholder=""
-                   id="fields[name_1]-2"
-                   required="">
+            <label for="callback_name" class="label cc-light">Ваше Имя</label>
+            <input type="text" class="modal__input" autofocus="autofocus" maxlength="256"
+                   name="callback_name" id="callback_name" placeholder="" required="">
             <label
-              for="fields[6379_1][14251]-14252" class="label cc-light">Телефон</label>
+              for="callback_tel" class="label cc-light">Телефон</label>
             <input
-              type="tel" class="modal__input" maxlength="256" name="fields[6379_1][14251]"
-              data-name="fields[6379_1][14251]" placeholder="+7 999 9999999"
-              id="fields[6379_1][14251]-14252" required="">
-            <label for="fields[6381_1][14263]-14264"
+              type="tel" class="modal__input" maxlength="256" name="callback_email"
+              placeholder="+7 999 9999999" id="callback_tel" required="">
+            <label for="callback_email"
                    class="label cc-light">Email</label>
             <input
-              type="email" class="modal__input" maxlength="256" name="fields[6381_1][14263]"
-              data-name="fields[6381_1][14263]" placeholder="example@company.ru"
-              id="fields[6381_1][14263]-14264" required="">
+              type="email" class="modal__input" maxlength="256" name="callback_email"
+              placeholder="example@company.ru" id="callback_email" required="">
           </div>
 
           <div class="">
@@ -494,6 +485,8 @@
           </div>
           <div class="wrapper_center">
             <button type="submit" class="btn btn_orange btn_submit"></button>
+          </div>
+          <div class="wrapper_center">
             <div class="modal__status"></div>
           </div>
         </form>

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const POST_FORM_URL = 'https://lk.gurdy.ru/rest/public/staff/notify';
   const SUCCESS_MESSAGE = 'Ваша заявка успешно отправлена';
-  const ERROR_MESSAGE = 'При отправке произошли проблемы! Повторите попытку позже или свяжитесь с нами иными способами.';
+  const ERROR_MESSAGE = 'При отправке произошла ошибка! Мы очень сожалеем.';
   const modal = document.getElementById('modal');
 
   modal.querySelector('.modal__dialog').addEventListener('click', e => {
